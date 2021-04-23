@@ -4,7 +4,7 @@ import MoviCard from "./MovieCard.js";
 export default function SearchMovi() {
   //states- input query, movies
   const [query, setQuery] = useState("");
-  //create the state for movies, and update that state appropriate
+  //create the state for movies, and update
   const [movies, setMovies] = useState([]);
 
   const SearchMovies = async (e) => {
