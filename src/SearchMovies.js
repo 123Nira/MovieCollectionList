@@ -31,7 +31,7 @@ export default function SearchMovi() {
           className="input"
           type="text"
           name="query"
-          placeholder="Enter Movie Name"
+          placeholder="Enter your favorite movie name"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
