@@ -2,16 +2,11 @@ import "./styles.css";
 import React, { useState } from "react";
 import MoviCard from "./MovieCard.js";
 export default function SearchMovi() {
-  //states- input query, movies
   const [query, setQuery] = useState("");
-  //create the state for movies, and update
   const [movies, setMovies] = useState([]);
-
   const SearchMovies = async (e) => {
     e.preventDefault();
-
     const url = `https://api.themoviedb.org/3/search/movie?api_key=89f4ec6343f74978a477d733171b3e35&language=en-US&query=${query}&page=1&include_adult=false`;
-
     try {
       const res = await fetch(url);
       const data = await res.json();
@@ -20,7 +15,6 @@ export default function SearchMovi() {
       console.error(err);
     }
   };
-
   return (
     <>
       <form className="form" onSubmit={SearchMovies}>
